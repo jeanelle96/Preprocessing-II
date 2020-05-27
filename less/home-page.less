@@ -1,4 +1,66 @@
+header{
+  .top-header{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: space-between;
+    border-bottom: 2px dashed color(grey);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .bus-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  h2{
+    text-align: left;
+    padding-top: 12px;
+  }
+  p{
+    text-align: left;
+    width: 50%;
+    border-bottom: 2px dashed grey;
+    padding-top: 13px;
+    padding-bottom: 15px;
+  }
+}
+  
+  nav{
+    align-self: center;
+    a{
+      text-decoration:none;
+      color: black;
+      margin-left: 12px;
+      margin-right: 12px;
+      font-size: 1.8rem;
+    }
+  }
+
 .home {
+  .bus-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h2{
+      text-align: center;
+      padding-top: 12px;
+    }
+    p{
+      text-align: left;
+      width: 50%;
+      border-bottom: 2px dashed grey;
+      padding-top: 13px;
+      padding-bottom: 15px;
+      
+    }
+  }
+
 
   .content-section {
     margin: 30px 0;
@@ -6,8 +68,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+  @media (min-width: 500px){
+    flex-direction: column;
+    align-items: center;
+  }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -16,6 +81,10 @@
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media (min-width: 500px){
+        width: 85%;
+        margin: 12px;
+      }
 
       img {
         border-radius: 10px;
@@ -26,13 +95,16 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media (min-width: 500px){
+      flex-direction: column;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
     }
 
-    .img-content {
+    .img-content{
       padding-right: 1%;
       padding-left: 0;
     }
@@ -41,6 +113,13 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media (min-width: 500px){
+      flex-direction: column;
+      align-items: center;
+      width: 85%;
+      margin: 12px;
+    }
 
     img {
       border-radius: 10px;
@@ -56,6 +135,16 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .button;
+        @media (min-width: 500px){
+          text-align: center;
+          flex-direction: column;
+        }
+      }
+      @media (min-width: 500px){
+        width: 90%;
+      }
     }
   }
 }// home
